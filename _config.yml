@@ -1,0 +1,28 @@
+title: HARIBOW Online Lesson
+tagline: 続けられる、ダブルダッチ
+description: 世界一のダブルダッチプレイヤーJUNYAが直接フィードバックする月額制オンラインレッスン。1人で続けられない人のための、伴走型レッスン。
+url: https://junyaunitydev.github.io
+baseurl: /haribow-online-lesson-lp
+
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - CLAUDE.md
+
+author:
+  name: JUNYA
+  email: ""
