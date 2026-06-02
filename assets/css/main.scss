@@ -1225,3 +1225,127 @@ img {
   font-size: 11px;
   opacity: 0.7;
 }
+
+// ============================================================
+// LP - Lesson videos (レッスン動画 / Drive 埋め込み・縦動画 9:16)
+// ============================================================
+
+.lesson-videos {
+  background-color: $color-charcoal;
+
+  .section-title {
+    color: $color-off-white;
+  }
+
+  .section-lead {
+    color: $color-warm-beige;
+  }
+
+  // ペア（実演 + 解説）2組 — auto-fit で PC は横2組 / スマホは自動で縦積み
+  .lv-sets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 48px;
+    max-width: $max-width;
+    margin: 0 auto 72px;
+  }
+
+  .lv-set {
+    min-width: 0;
+  }
+
+  .lv-set-title {
+    font-family: $font-serif;
+    font-size: 20px;
+    color: $color-off-white;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba($color-warm-beige, 0.4);
+  }
+
+  .lv-set-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    align-items: end;
+  }
+
+  // 技紹介サブ見出し
+  .lv-subhead {
+    font-family: $font-serif;
+    font-size: 22px;
+    color: $color-off-white;
+    text-align: center;
+    margin-bottom: 32px;
+    letter-spacing: 0.05em;
+  }
+
+  // 技紹介グリッド — auto-fit で PC は5本並び / スマホは自動で2本
+  .lv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 20px;
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+
+  // 動画カード共通
+  .lv-video {
+    margin: 0;
+    min-width: 0;
+
+    figcaption {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 13px;
+      color: $color-warm-beige;
+    }
+  }
+
+  // 縦動画の枠（9:16）— 大画面でも巨大化しないよう最大幅＋中央寄せ
+  .lv-frame {
+    position: relative;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    aspect-ratio: 9 / 16;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #000;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+
+    iframe,
+    video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      object-fit: cover;
+      background-color: #000;
+    }
+  }
+
+  // ペア内の枠：高さを揃え、幅は各動画の実寸比率に合わせて黒帯を消す
+  .lv-set-grid .lv-frame {
+    width: auto;
+    max-width: 100%;
+    height: clamp(280px, 42vw, 460px);
+  }
+
+  // 解説動画（888×1920）は 9:16 より細いので実寸比率に
+  .lv-frame--narrow {
+    aspect-ratio: 888 / 1920;
+  }
+
+  @media (max-width: 768px) {
+    .lv-sets {
+      gap: 32px;
+    }
+
+    .lv-set-grid {
+      gap: 12px;
+    }
+  }
+}
