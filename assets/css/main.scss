@@ -1073,6 +1073,30 @@ img {
   margin: 40px auto 0;
 }
 
+// 上達ロードマップの実画面ショーケース
+.roadmap-showcase {
+  text-align: center;
+  margin: 48px auto 0;
+
+  img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid $color-line;
+    border-radius: 22px;
+    box-shadow: 0 30px 60px -28px rgba($color-charcoal, 0.4);
+  }
+
+  .roadmap-showcase-cap {
+    margin-top: 18px;
+    font-size: 13px;
+    color: $color-dark-beige;
+    line-height: 1.7;
+  }
+}
+
 .lp-details .articles-list {
   list-style: none;
 
