@@ -1067,6 +1067,23 @@ img {
   margin: 0 auto;
 }
 
+// 記事テーマのアコーディオン（サービス内・中央配置）
+.services .articles-details {
+  max-width: $max-width-narrow;
+  margin: 40px auto 0;
+}
+
+.lp-details .articles-list {
+  list-style: none;
+
+  li {
+    padding: 9px 0;
+    border-bottom: 1px solid $color-line;
+
+    &:last-child { border-bottom: none; }
+  }
+}
+
 // ============================================================
 // LP - Creds (講師実績)
 // ============================================================
