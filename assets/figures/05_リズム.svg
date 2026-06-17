@@ -1,0 +1,68 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+   <marker id="ar" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto">
+     <path d="M0,0 L6,3 L0,6 Z" fill="#667"/>
+   </marker>
+ </defs>
+ <style>
+  text{font-family:"Hiragino Sans","Helvetica Neue",sans-serif}
+  .ttl{font-size:26px;font-weight:700;fill:#C68B6B;text-anchor:middle}
+  .sub{font-size:13px;fill:#667;text-anchor:middle}
+  .rowname{font-size:17px;font-weight:700;fill:#3b4a5c}
+  .rowcnt{font-size:12px;fill:#667}
+  .track{fill:#eef3fa}
+  .div{stroke:#c9d6e6;stroke-width:1.5;stroke-dasharray:3 3}
+  .beat{fill:#C68B6B}
+  .syl{font-size:16px;font-weight:700;fill:#C68B6B;text-anchor:middle}
+  .foot{fill:#3b4a5c}
+  .axis{stroke:#667;stroke-width:1.5;fill:none}
+  .axislbl{font-size:12px;fill:#667}
+  .brace{stroke:#667;stroke-width:1.5;fill:none}
+ </style>
+ <rect width="600" height="600" fill="#ffffff"/>
+ <text class="ttl" x="300" y="44">リズム＝1カウントを何回刻むか</text>
+ <text class="sub" x="300" y="72">鳴らす拍の“音”だけ残して読む</text>
+
+ <!-- 1カウントのブレース＋時間軸 -->
+ <path class="brace" d="M210,116 v6 h350 v-6"/>
+ <text class="axislbl" x="385" y="110" text-anchor="middle">1カウント</text>
+ <line class="axis" x1="210" y1="92" x2="250" y2="92" marker-end="url(#ar)"/>
+ <text class="axislbl" x="196" y="96" text-anchor="end">時間</text>
+
+ <!-- 行を生成的に手書き -->
+ <!-- Row1 8ビート y=180 -->
+ <text class="rowname" x="40" y="178">8ビート</text>
+ <text class="rowcnt" x="40" y="196">（1回）</text>
+ <rect class="track" x="210" y="158" width="350" height="44" rx="8"/>
+ <circle class="beat" cx="385" cy="180" r="13"/>
+ <ellipse class="foot" cx="385" cy="216" rx="6" ry="10"/>
+
+ <!-- Row2 ダブル y=275 -->
+ <text class="rowname" x="40" y="273">ダブル</text>
+ <text class="rowcnt" x="40" y="291">（2回）</text>
+ <rect class="track" x="210" y="253" width="350" height="44" rx="8"/>
+ <line class="div" x1="385" y1="257" x2="385" y2="293"/>
+ <circle class="beat" cx="297" cy="275" r="13"/><text class="syl" x="297" y="249">ダ</text><ellipse class="foot" cx="297" cy="311" rx="6" ry="10"/>
+ <circle class="beat" cx="473" cy="275" r="13"/><text class="syl" x="473" y="249">ブ</text><ellipse class="foot" cx="473" cy="311" rx="6" ry="10"/>
+
+ <!-- Row3 トリプ y=370 -->
+ <text class="rowname" x="40" y="368">トリプ</text>
+ <text class="rowcnt" x="40" y="386">（3回）</text>
+ <rect class="track" x="210" y="348" width="350" height="44" rx="8"/>
+ <line class="div" x1="327" y1="352" x2="327" y2="388"/><line class="div" x1="443" y1="352" x2="443" y2="388"/>
+ <circle class="beat" cx="268" cy="370" r="13"/><text class="syl" x="268" y="344">と</text><ellipse class="foot" cx="268" cy="406" rx="6" ry="10"/>
+ <circle class="beat" cx="385" cy="370" r="13"/><text class="syl" x="385" y="344">り</text><ellipse class="foot" cx="385" cy="406" rx="6" ry="10"/>
+ <circle class="beat" cx="502" cy="370" r="13"/><text class="syl" x="502" y="344">ぷ</text><ellipse class="foot" cx="502" cy="406" rx="6" ry="10"/>
+
+ <!-- Row4 クワトロ y=465 -->
+ <text class="rowname" x="40" y="463">クワトロ</text>
+ <text class="rowcnt" x="40" y="481">（4回）</text>
+ <rect class="track" x="210" y="443" width="350" height="44" rx="8"/>
+ <line class="div" x1="297" y1="447" x2="297" y2="483"/><line class="div" x1="385" y1="447" x2="385" y2="483"/><line class="div" x1="472" y1="447" x2="472" y2="483"/>
+ <circle class="beat" cx="254" cy="465" r="13"/><text class="syl" x="254" y="439">ク</text><ellipse class="foot" cx="254" cy="501" rx="6" ry="10"/>
+ <circle class="beat" cx="341" cy="465" r="13"/><text class="syl" x="341" y="439">ワ</text><ellipse class="foot" cx="341" cy="501" rx="6" ry="10"/>
+ <circle class="beat" cx="428" cy="465" r="13"/><text class="syl" x="428" y="439">ト</text><ellipse class="foot" cx="428" cy="501" rx="6" ry="10"/>
+ <circle class="beat" cx="516" cy="465" r="13"/><text class="syl" x="516" y="439">ロ</text><ellipse class="foot" cx="516" cy="501" rx="6" ry="10"/>
+
+ <text class="sub" x="300" y="556">色のついた● ＝ 鳴らす拍（足が接地する瞬間）。同じ1カウントを何分割するか。</text>
+</svg>

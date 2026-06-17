@@ -1,0 +1,47 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+ <style>
+  text{font-family:"Hiragino Sans","Helvetica Neue",sans-serif}
+  .ttl{font-size:28px;font-weight:700;fill:#C68B6B;text-anchor:middle}
+  .mid{font-size:15px;font-weight:700;fill:#C68B6B;text-anchor:middle}
+  .lbl{font-size:20px;font-weight:700;fill:#3b4a5c;text-anchor:middle}
+  .sub{font-size:14px;fill:#667;text-anchor:middle}
+  .p{fill:#3b4a5c}
+  .plimb{stroke:#3b4a5c;stroke-linecap:round;fill:none}
+  .ground{stroke:#cbd3dd;stroke-width:3}
+  .vib{stroke:#f0a500;stroke-width:3;fill:none;stroke-linecap:round}
+ </style>
+ <rect width="600" height="600" fill="#ffffff"/>
+ <text class="ttl" x="300" y="48">質感：アンカー／スナッピー</text>
+ <text class="mid" x="300" y="84">頭の揺れで見分ける</text>
+ <line class="ground" x1="60" y1="450" x2="540" y2="450"/>
+
+ <!-- アンカー（頭が揺れない）feet (180,448) -->
+ <g transform="translate(180,448)">
+   <line class="plimb" x1="-8" y1="-80" x2="-10" y2="-4" stroke-width="15"/>
+   <line class="plimb" x1="8" y1="-80" x2="10" y2="-4" stroke-width="15"/>
+   <line class="plimb" x1="-19" y1="-148" x2="-18" y2="-98" stroke-width="9"/>
+   <line class="plimb" x1="19" y1="-148" x2="18" y2="-98" stroke-width="9"/>
+   <path class="p" d="M-19,-150 L19,-150 L13,-80 L-13,-80 Z"/>
+   <line class="plimb" x1="0" y1="-150" x2="0" y2="-164" stroke-width="13"/>
+   <circle class="p" cx="0" cy="-168" r="15"/>
+ </g>
+ <text class="lbl" x="180" y="488">アンカー</text>
+ <text class="sub" x="180" y="510">頭が揺れない＝上半身が静か</text>
+
+ <!-- スナッピー（頭が揺れる）feet (420,448) -->
+ <g transform="translate(420,448)">
+   <line class="plimb" x1="-8" y1="-80" x2="-10" y2="-4" stroke-width="15"/>
+   <line class="plimb" x1="8" y1="-80" x2="10" y2="-4" stroke-width="15"/>
+   <line class="plimb" x1="-19" y1="-148" x2="-18" y2="-98" stroke-width="9"/>
+   <line class="plimb" x1="19" y1="-148" x2="18" y2="-98" stroke-width="9"/>
+   <path class="p" d="M-19,-150 L19,-150 L13,-80 L-13,-80 Z"/>
+   <line class="plimb" x1="0" y1="-150" x2="0" y2="-164" stroke-width="13"/>
+   <circle class="p" cx="0" cy="-168" r="15"/>
+   <path class="vib" d="M-26,-176 q-8,-6 0,-12"/>
+   <path class="vib" d="M-34,-170 q-12,-8 0,-18"/>
+   <path class="vib" d="M26,-176 q8,-6 0,-12"/>
+   <path class="vib" d="M34,-170 q12,-8 0,-18"/>
+ </g>
+ <text class="lbl" x="420" y="488">スナッピー</text>
+ <text class="sub" x="420" y="510">頭が揺れる＝衝撃が体に伝わる</text>
+</svg>

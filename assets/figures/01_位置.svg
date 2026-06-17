@@ -1,0 +1,58 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+   <marker id="ah" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+     <path d="M0,0 L6,3 L0,6 Z" fill="#f0a500"/>
+   </marker>
+ </defs>
+ <style>
+  text{font-family:"Hiragino Sans","Helvetica Neue",sans-serif}
+  .ttl{font-size:30px;font-weight:700;fill:#C68B6B;text-anchor:middle}
+  .rope{stroke:#C68B6B;stroke-width:5;fill:none;stroke-linecap:round}
+  .ropelbl{font-size:14px;fill:#667;text-anchor:middle}
+  .arrow{stroke:#f0a500;stroke-width:3;fill:none;stroke-linecap:round}
+  .dir{font-size:15px;font-weight:700;fill:#3b4a5c}
+  .sub{font-size:11px;fill:#667}
+  .origin{font-size:15px;font-weight:700;fill:#3b4a5c;text-anchor:end}
+  .onep{font-size:13px;fill:#667;text-anchor:end}
+  .dash{stroke:#3b4a5c;stroke-width:1.5;fill:none;stroke-dasharray:4 4}
+  .lead{stroke:#bcc4cf;stroke-width:1;fill:none}
+ </style>
+ <rect x="0" y="0" width="600" height="600" fill="#ffffff"/>
+
+ <text class="ttl" x="300" y="50">①位置（前後左右）</text>
+
+ <path class="rope" d="M95,224 Q300,128 505,224"/>
+ <text class="ropelbl" x="300" y="150">前の縄</text>
+ <path class="rope" d="M95,442 Q300,534 505,442"/>
+ <text class="ropelbl" x="300" y="514">後ろの縄</text>
+
+ <g fill="#3b4a5c" fill-opacity="0.30">
+   <ellipse cx="300" cy="276" rx="24" ry="14"/><circle cx="300" cy="258" r="14"/>
+   <ellipse cx="300" cy="413" rx="24" ry="14"/><circle cx="300" cy="395" r="14"/>
+   <ellipse cx="212" cy="343" rx="24" ry="14"/><circle cx="212" cy="325" r="14"/>
+   <ellipse cx="388" cy="343" rx="24" ry="14"/><circle cx="388" cy="325" r="14"/>
+ </g>
+
+ <circle class="dash" cx="300" cy="335" r="34"/>
+
+ <ellipse cx="300" cy="343" rx="24" ry="14" fill="#3b4a5c"/>
+ <circle cx="300" cy="325" r="14" fill="#3b4a5c"/>
+
+ <line class="arrow" x1="300" y1="299" x2="300" y2="285" marker-end="url(#ah)"/>
+ <line class="arrow" x1="300" y1="371" x2="300" y2="384" marker-end="url(#ah)"/>
+ <line class="arrow" x1="264" y1="335" x2="246" y2="338" marker-end="url(#ah)"/>
+ <line class="arrow" x1="336" y1="335" x2="354" y2="338" marker-end="url(#ah)"/>
+
+ <text class="origin" x="262" y="318">原点</text>
+ <path class="lead" d="M274,358 L186,398"/>
+ <text class="onep" x="182" y="402">自分一人分</text>
+
+ <text class="dir" x="332" y="252" text-anchor="start">前</text>
+ <text class="sub" x="332" y="267" text-anchor="start">一人分以上ずらす</text>
+ <text class="dir" x="332" y="392" text-anchor="start">後ろ</text>
+ <text class="sub" x="332" y="407" text-anchor="start">一人分以上ずらす</text>
+ <text class="dir" x="186" y="322" text-anchor="end">左</text>
+ <text class="sub" x="186" y="337" text-anchor="end">一人分以上ずらす</text>
+ <text class="dir" x="414" y="322" text-anchor="start">右</text>
+ <text class="sub" x="414" y="337" text-anchor="start">一人分以上ずらす</text>
+</svg>

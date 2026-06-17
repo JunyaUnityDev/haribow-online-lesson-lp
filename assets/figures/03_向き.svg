@@ -1,0 +1,61 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+   <marker id="rot" markerWidth="9" markerHeight="9" refX="5" refY="3" orient="auto">
+     <path d="M0,0 L6,3 L0,6 Z" fill="#f0a500"/>
+   </marker>
+ </defs>
+ <style>
+  text{font-family:"Hiragino Sans","Helvetica Neue",sans-serif}
+  .ttl{font-size:30px;font-weight:700;fill:#C68B6B;text-anchor:middle}
+  .sub{font-size:15px;font-weight:700;fill:#C68B6B;text-anchor:middle}
+  .note{font-size:13px;fill:#667;text-anchor:middle}
+  .lbl{font-size:16px;font-weight:700;fill:#3b4a5c;text-anchor:middle}
+  .rope{stroke:#C68B6B;stroke-width:4;fill:none;stroke-linecap:round}
+  .p{fill:#3b4a5c}
+  .nose{fill:#f0a500}
+  .ctr{stroke:#3b4a5c;stroke-width:1.3;fill:none;stroke-dasharray:3 3}
+ </style>
+ <rect width="600" height="600" fill="#ffffff"/>
+ <text class="ttl" x="300" y="48">③向き（前・横・後ろ）</text>
+ <text class="sub" x="300" y="80">場所は縄の中心のまま、体の向きだけ変える</text>
+
+ <!-- 各パネル：同じ「縄の中心」に人を置き、向き(鼻)だけ変える。真上から見た図 -->
+
+ <!-- 左上：前向き（鼻=上）center(185,225) -->
+ <path class="rope" d="M120,210 Q185,165 250,210"/>
+ <path class="rope" d="M120,250 Q185,295 250,250"/>
+ <circle class="ctr" cx="185" cy="230" r="30"/>
+ <ellipse class="p" cx="185" cy="239" rx="22" ry="12"/>
+ <circle class="p" cx="185" cy="230" r="16"/>
+ <path class="nose" d="M177,214 L193,214 L185,201 Z"/>
+ <text class="lbl" x="185" y="320">前向き</text>
+
+ <!-- 右上：後ろ向き（鼻=下）center(415,225) -->
+ <path class="rope" d="M350,210 Q415,165 480,210"/>
+ <path class="rope" d="M350,250 Q415,295 480,250"/>
+ <circle class="ctr" cx="415" cy="230" r="30"/>
+ <ellipse class="p" cx="415" cy="221" rx="22" ry="12"/>
+ <circle class="p" cx="415" cy="230" r="16"/>
+ <path class="nose" d="M407,246 L423,246 L415,259 Z"/>
+ <text class="lbl" x="415" y="320">後ろ向き</text>
+
+ <!-- 左下：左横向き（鼻=左）center(185,405) -->
+ <path class="rope" d="M120,390 Q185,345 250,390"/>
+ <path class="rope" d="M120,430 Q185,475 250,430"/>
+ <circle class="ctr" cx="185" cy="410" r="30"/>
+ <ellipse class="p" cx="194" cy="410" rx="12" ry="22"/>
+ <circle class="p" cx="185" cy="410" r="16"/>
+ <path class="nose" d="M169,402 L169,418 L156,410 Z"/>
+ <text class="lbl" x="185" y="500">左横向き</text>
+
+ <!-- 右下：右横向き（鼻=右）center(415,405) -->
+ <path class="rope" d="M350,390 Q415,345 480,390"/>
+ <path class="rope" d="M350,430 Q415,475 480,430"/>
+ <circle class="ctr" cx="415" cy="410" r="30"/>
+ <ellipse class="p" cx="406" cy="410" rx="12" ry="22"/>
+ <circle class="p" cx="415" cy="410" r="16"/>
+ <path class="nose" d="M431,402 L431,418 L444,410 Z"/>
+ <text class="lbl" x="415" y="500">右横向き</text>
+
+ <text class="note" x="300" y="556"><tspan class="nose" style="fill:#f0a500;font-weight:700">▲</tspan> 金の三角＝顔の向き。点線の円＝縄の中心（4枚とも同じ場所）</text>
+</svg>

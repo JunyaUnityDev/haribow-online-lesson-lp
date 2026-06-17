@@ -1,0 +1,51 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+   <marker id="a2" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto-start-reverse">
+     <path d="M0,0 L6,3 L0,6 Z" fill="#f0a500"/>
+   </marker>
+ </defs>
+ <style>
+  text{font-family:"Hiragino Sans","Helvetica Neue",sans-serif}
+  .ttl{font-size:30px;font-weight:700;fill:#C68B6B;text-anchor:middle}
+  .lbl{font-size:18px;font-weight:700;fill:#3b4a5c;text-anchor:middle}
+  .p{fill:#3b4a5c}
+  .plimb{stroke:#3b4a5c;stroke-linecap:round;fill:none}
+  .ground{stroke:#cbd3dd;stroke-width:3}
+  .gdash{stroke:#f0a500;stroke-width:1.5;stroke-dasharray:4 4;fill:none}
+  .gmark{stroke:#f0a500;stroke-width:2;fill:none}
+  .glbl{font-size:14px;font-weight:700;fill:#d99400}
+ </style>
+ <rect width="600" height="600" fill="#ffffff"/>
+ <text class="ttl" x="300" y="50">②高さ（上下2段階）</text>
+ <line class="ground" x1="60" y1="410" x2="540" y2="410"/>
+
+ <!-- 立つ（上＝普通）feet at (210,408) -->
+ <g transform="translate(210,408)">
+   <line class="plimb" x1="-8" y1="-80" x2="-10" y2="-4" stroke-width="15"/>
+   <line class="plimb" x1="8" y1="-80" x2="10" y2="-4" stroke-width="15"/>
+   <line class="plimb" x1="-19" y1="-148" x2="-18" y2="-98" stroke-width="9"/>
+   <line class="plimb" x1="19" y1="-148" x2="18" y2="-98" stroke-width="9"/>
+   <path class="p" d="M-19,-150 L19,-150 L13,-80 L-13,-80 Z"/>
+   <line class="plimb" x1="0" y1="-150" x2="0" y2="-164" stroke-width="13"/>
+   <circle class="p" cx="0" cy="-168" r="15"/>
+ </g>
+ <text class="lbl" x="210" y="448">上＝普通</text>
+
+ <!-- しゃがむ（下）feet at (405,408) -->
+ <g transform="translate(405,408)">
+   <polyline class="plimb" points="-8,-52 -19,-26 -10,-3" stroke-width="15"/>
+   <polyline class="plimb" points="8,-52 19,-26 10,-3" stroke-width="15"/>
+   <line class="plimb" x1="-19" y1="-90" x2="-18" y2="-60" stroke-width="9"/>
+   <line class="plimb" x1="19" y1="-90" x2="18" y2="-60" stroke-width="9"/>
+   <path class="p" d="M-19,-92 L19,-92 L13,-52 L-13,-52 Z"/>
+   <line class="plimb" x1="0" y1="-92" x2="0" y2="-106" stroke-width="13"/>
+   <circle class="p" cx="0" cy="-110" r="15"/>
+ </g>
+ <text class="lbl" x="405" y="448">下＝しゃがむ</text>
+
+ <!-- 頭一つ分以上マーカー（立つ頭頂 225 / しゃがむ頭頂 283）-->
+ <line class="gdash" x1="232" y1="225" x2="320" y2="225"/>
+ <line class="gdash" x1="383" y1="283" x2="320" y2="283"/>
+ <line class="gmark" x1="320" y1="225" x2="320" y2="283" marker-start="url(#a2)" marker-end="url(#a2)"/>
+ <text class="glbl" x="328" y="258" text-anchor="start">頭一つ分以上</text>
+</svg>

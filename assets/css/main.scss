@@ -1027,6 +1027,40 @@ img {
   }
 }
 
+// メソッド内の図（動き×リズム×空間）
+.method-figs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 16px;
+
+  figure {
+    margin: 0;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    background-color: $color-off-white;
+    border: 1px solid $color-line;
+    border-radius: 10px;
+    display: block;
+  }
+
+  figcaption {
+    margin-top: 8px;
+    font-size: 12px;
+    color: $color-dark-beige;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
 // 経歴アコーディオン内は中央寄せの講師セクション内でも左寄せに
 .creds .creds-details {
   max-width: $max-width-narrow;
