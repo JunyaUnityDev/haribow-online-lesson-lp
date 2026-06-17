@@ -943,6 +943,97 @@ img {
 }
 
 // ============================================================
+// LP - くわしく（アコーディオン）＋ メソッド
+// ============================================================
+
+.em {
+  color: $color-terracotta;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.method {
+  background-color: $color-warm-beige;
+
+  .method-body {
+    max-width: $max-width-narrow;
+    margin: 0 auto;
+  }
+
+  .method-lead {
+    font-family: $font-serif;
+    font-size: 23px;
+    line-height: 1.6;
+    color: $color-charcoal;
+    margin-bottom: 18px;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.95;
+    color: $color-charcoal;
+    margin-bottom: 14px;
+  }
+
+  @media (max-width: 768px) {
+    .method-lead { font-size: 19px; }
+    p { font-size: 14px; }
+  }
+}
+
+.lp-details {
+  border: 1px solid $color-line;
+  border-radius: 14px;
+  background-color: $color-pure-white;
+  margin-top: 14px;
+  overflow: hidden;
+  text-align: left;
+
+  > summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 16px 20px;
+    font-family: $font-sans;
+    font-weight: 700;
+    font-size: 14px;
+    color: $color-terracotta;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &::-webkit-details-marker { display: none; }
+
+    &::after {
+      content: "›";
+      margin-left: auto;
+      color: $color-faint;
+      font-size: 20px;
+      line-height: 1;
+      transform: rotate(90deg);
+      transition: transform 0.22s ease;
+    }
+  }
+
+  &[open] > summary::after { transform: rotate(-90deg); }
+
+  .lp-details-body {
+    padding: 2px 20px 20px;
+    font-size: 14px;
+    color: $color-dark-beige;
+    line-height: 1.9;
+
+    p { margin-bottom: 8px; }
+    p:last-child { margin-bottom: 0; }
+  }
+}
+
+// 経歴アコーディオン内は中央寄せの講師セクション内でも左寄せに
+.creds .creds-details {
+  max-width: $max-width-narrow;
+  margin: 0 auto;
+}
+
+// ============================================================
 // LP - Creds (講師実績)
 // ============================================================
 
