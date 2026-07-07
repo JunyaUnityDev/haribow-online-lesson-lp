@@ -44,23 +44,26 @@
   <script>
   // スクロール・リビール：対象に .reveal を付けて監視（JS無効なら何もしない＝全表示のまま）
   (function () {
+    // 折りたたみ<details>（.lp-details系）は対象にしない：
+    //   iOS Safari は先祖に transform/will-change があると中の<video>を描画しないため、
+    //   動画を含むアコーディオンに reveal を掛けるとスマホで動画が消える。
     var SEL = '.hero-eyebrow,.hero-catch,.hero-sub,.hero-cta,' +
       '.section-title,.section-lead,.method-body,.principle-card,.principles-deliver,.principles-note,.service-card,.roadmap-showcase,' +
-      '.articles-details,.lesson-videos .lp-details,.outcome-step,.outcome-note,' +
-      '.pricing-card,.faq-item,.creds-profile,.creds-details';
+      '.outcome-step,.outcome-note,' +
+      '.pricing-card,.faq-item,.creds-profile';
     var els = [].slice.call(document.querySelectorAll(SEL));
     if (!els.length) return;
     els.forEach(function (el) { el.classList.add('reveal'); });
-    if (!('IntersectionObserver' in window)) {
-      els.forEach(function (el) { el.classList.add('is-visible'); });
-      return;
-    }
+    var showAll = function () { els.forEach(function (el) { el.classList.add('is-visible'); }); };
+    if (!('IntersectionObserver' in window)) { showAll(); return; }
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (en.isIntersecting) { en.target.classList.add('is-visible'); io.unobserve(en.target); }
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
     els.forEach(function (el) { io.observe(el); });
+    // フェイルセーフ：何らかの理由で発火しなくても数秒後に必ず全表示（要素が消えたままにしない）
+    setTimeout(showAll, 3000);
   })();
   </script>
 </body>
