@@ -1559,3 +1559,112 @@ img {
     }
   }
 }
+
+// ============================================================
+// LP - Hero eyebrow（世界一の格上げ表示）
+// ============================================================
+
+.hero-eyebrow {
+  display: inline-block;
+  font-family: $font-sans;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: $color-terracotta;
+  border: 1px solid rgba($color-terracotta, 0.35);
+  border-radius: 999px;
+  padding: 6px 16px;
+  margin-bottom: 22px;
+
+  @media (max-width: 768px) {
+    font-size: 11px;
+    padding: 5px 13px;
+    margin-bottom: 16px;
+  }
+}
+
+// ============================================================
+// LP - Outcomes（続けると、どうなる？）
+// ============================================================
+
+.outcomes {
+  background-color: $color-warm-beige;
+
+  .outcome-timeline {
+    max-width: $max-width-narrow;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .outcome-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    background-color: $color-pure-white;
+    border: 1px solid $color-line;
+    border-radius: 14px;
+    padding: 18px 20px;
+  }
+
+  .outcome-when {
+    flex: 0 0 auto;
+    min-width: 62px;
+    font-family: $font-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: $color-terracotta;
+    line-height: 1.4;
+  }
+
+  .outcome-what {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.85;
+    color: $color-charcoal;
+  }
+
+  .outcome-note {
+    max-width: $max-width-narrow;
+    margin: 22px auto 0;
+    font-size: 13px;
+    line-height: 1.8;
+    color: $color-dark-beige;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .outcome-step {
+      gap: 12px;
+      padding: 15px 16px;
+    }
+    .outcome-when { min-width: 52px; font-size: 17px; }
+    .outcome-what { font-size: 14px; }
+  }
+}
+
+// ============================================================
+// LP - FAQ（.lp-details を再利用）
+// ============================================================
+
+.faq {
+  .faq-list {
+    max-width: $max-width-narrow;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .faq-item {
+    margin-top: 0;
+
+    .lp-details-body p {
+      margin: 0;
+      font-size: 14.5px;
+      line-height: 1.9;
+      color: $color-charcoal;
+    }
+  }
+}
