@@ -25,6 +25,23 @@
   {% include footer.html %}
 
   <script>
+  // スマホはヒーロー動画を軽量版に差し替え（自動再生の固まり対策）。JS無効時はPC用が再生される。
+  (function () {
+    var v = document.querySelector('.hero-bg');
+    if (!v) return;
+    if (window.matchMedia && window.matchMedia('(max-width: 768px)').matches) {
+      var s = v.querySelector('source');
+      if (s && s.src.indexOf('hero-loop.mp4') !== -1) {
+        s.src = s.src.replace('hero-loop.mp4', 'hero-loop-mobile.mp4');
+        v.load();
+      }
+      var p = v.play();
+      if (p && p.catch) { p.catch(function () {}); }
+    }
+  })();
+  </script>
+
+  <script>
   // スクロール・リビール：対象に .reveal を付けて監視（JS無効なら何もしない＝全表示のまま）
   (function () {
     var SEL = '.hero-eyebrow,.hero-catch,.hero-sub,.hero-cta,' +
