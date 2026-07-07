@@ -1768,3 +1768,125 @@ img {
   .hero-cta { animation: none; }
   .hero-bg { display: none; }
 }
+
+// ============================================================
+// LP - 上達の原理は、たった3つ。
+// ============================================================
+
+.principles {
+  background-color: $color-off-white;
+
+  .principles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    max-width: $max-width-narrow;
+    margin: 0 auto;
+  }
+
+  .principle-card {
+    background: $color-pure-white;
+    border: 1px solid $color-line;
+    border-radius: 16px;
+    padding: 28px 22px;
+    text-align: center;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 32px -20px rgba(40,26,16,0.35);
+    }
+  }
+
+  .principle-card--accent {
+    border-color: rgba($color-terracotta, 0.5);
+    background: rgba($color-terracotta, 0.05);
+  }
+
+  .principle-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    font-family: $font-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: $color-pure-white;
+    background: $color-terracotta;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+
+  .principle-title {
+    font-family: $font-serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: $color-charcoal;
+    margin-bottom: 7px;
+  }
+
+  .principle-text {
+    font-size: 13.5px;
+    color: $color-dark-beige;
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  .principles-deliver {
+    max-width: $max-width-narrow;
+    margin: 42px auto 0;
+  }
+
+  .principles-deliver-lead {
+    font-family: $font-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: $color-charcoal;
+    text-align: center;
+    margin-bottom: 18px;
+  }
+
+  .principles-deliver-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    li {
+      background: $color-warm-beige;
+      border-radius: 12px;
+      padding: 16px 18px;
+      font-size: 14.5px;
+      line-height: 1.85;
+      color: $color-charcoal;
+    }
+  }
+
+  .pd-key {
+    display: inline-block;
+    font-weight: 700;
+    color: $color-terracotta;
+    margin-right: 8px;
+  }
+
+  .principles-note {
+    max-width: $max-width-narrow;
+    margin: 30px auto 0;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.95;
+    color: $color-charcoal;
+  }
+
+  @media (max-width: 768px) {
+    .principles-grid { grid-template-columns: 1fr; gap: 12px; }
+    .principle-card { padding: 22px 20px; }
+    .principle-num { width: 40px; height: 40px; font-size: 20px; }
+    .principles-deliver-list li { font-size: 14px; }
+    .pd-key { display: block; margin-bottom: 2px; }
+    .principles-note { font-size: 14px; }
+  }
+}
