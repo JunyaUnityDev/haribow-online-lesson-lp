@@ -1078,22 +1078,52 @@ img {
   text-align: center;
   margin: 48px auto 0;
 
-  img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border: 1px solid $color-line;
-    border-radius: 22px;
-    box-shadow: 0 30px 60px -28px rgba($color-charcoal, 0.4);
+  .roadmap-demo-label {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: $color-terra;
+    text-transform: uppercase;
+    margin-bottom: 20px;
   }
 
   .roadmap-showcase-cap {
-    margin-top: 18px;
+    margin-top: 22px;
     font-size: 13px;
     color: $color-dark-beige;
     line-height: 1.7;
+  }
+}
+
+// スマホフレーム
+.phone-frame {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  height: 600px;
+  background: #1a1a1a;
+  border-radius: 40px;
+  padding: 14px 10px;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.08),
+    0 40px 80px -20px rgba(0,0,0,0.5);
+
+  .phone-notch {
+    width: 80px;
+    height: 8px;
+    background: #333;
+    border-radius: 4px;
+    margin: 0 auto 10px;
+  }
+
+  .phone-screen {
+    width: 100%;
+    height: calc(100% - 28px);
+    border: none;
+    border-radius: 28px;
+    overflow: hidden;
+    display: block;
+    background: #fff;
   }
 }
 
