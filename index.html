@@ -182,7 +182,7 @@ description: 世界一のダブルダッチプレイヤーJUNYAが直接フィ�
         <div class="phone-notch"></div>
         <iframe
           id="roadmap-demo"
-          src="https://junyaunitydev.github.io/haribow-yutty-roadmap/"
+          src="https://junyaunitydev.github.io/haribow-yutty-roadmap/?demo=1"
           class="phone-screen"
           title="上達ロードマップ デモ"
           scrolling="yes"
@@ -190,30 +190,6 @@ description: 世界一のダブルダッチプレイヤーJUNYAが直接フィ�
       </div>
       <p class="roadmap-showcase-cap">これが毎月あなたの手元に届くロードマップです。<br>タップ・スクロールして体感してみてください。</p>
     </div>
-
-    <script>
-    (function() {
-      var iframe = document.getElementById('roadmap-demo');
-      if (!iframe) return;
-      iframe.addEventListener('load', function() {
-        try {
-          var doc = this.contentDocument;
-          var obs = new MutationObserver(function() {
-            doc.querySelectorAll('.video-embed iframe:not([data-blocked])').forEach(function(f) {
-              var m = (f.src || '').match(/embed\/([^?&]+)/);
-              if (!m) return;
-              f.setAttribute('data-blocked', '1');
-              var img = doc.createElement('img');
-              img.src = 'https://img.youtube.com/vi/' + m[1] + '/hqdefault.jpg';
-              img.style.cssText = 'width:100%;border-radius:6px;display:block;pointer-events:none;';
-              f.parentNode.replaceChild(img, f);
-            });
-          });
-          obs.observe(doc.body, { childList: true, subtree: true });
-        } catch(e) {}
-      });
-    })();
-    </script>
 
     <details class="lp-details articles-details">
       <summary>これまで配信してきた記事テーマ（一部）を見る</summary>
